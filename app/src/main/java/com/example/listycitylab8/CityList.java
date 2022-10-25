@@ -30,4 +30,8 @@ public class CityList {
         Collections.sort(list);
         return list;
     }
+
+    public boolean deleteCity(City city){
+        return false;
+    }
 }
