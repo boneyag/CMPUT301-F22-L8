@@ -32,6 +32,10 @@ public class CityList {
     }
 
     public boolean deleteCity(City city){
+        if (cities.contains(city)){
+            cities.remove(city);
+            return true;
+        }
         return false;
     }
 }
