@@ -1,6 +1,7 @@
 package com.example.listycitylab8;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -22,5 +23,19 @@ public class CityListTest {
 
         cityList.addCity(new City("Saskatoon", "SK"));
         assertEquals(2, cityList.getCities().size());
+    }
+
+    @Test
+    void deleteCity(){
+        CityList cityList = mockCityList();
+        assertEquals(1, cityList.getCities().size());
+
+        cityList.addCity(new City("Saskatoon", "SK"));
+        assertEquals(2, cityList.getCities().size());
+
+        City newCity = new City("Calgary", "AB");
+        cityList.addCity(newCity);
+        assertTrue(cityList.deleteCity(newCity));
+
     }
 }
