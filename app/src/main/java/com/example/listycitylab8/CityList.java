@@ -38,4 +38,8 @@ public class CityList {
         }
         return false;
     }
+
+    public int countCities(){
+        return 0;
+    }
 }
